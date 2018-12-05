@@ -1,0 +1,7 @@
+include LICENSE
+include VERSION
+include README.rst
+recursive-include weather/initialdata *
+recursive-include weather/locale *
+recursive-include weather/templates *
+recursive-include weather/migrations *

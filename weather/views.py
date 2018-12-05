@@ -5,10 +5,18 @@ from django.template import RequestContext
 
 import requests
 
-def get_dashboard_meta(page_name):
-    if page_name == 'weather':
-        return {'function':None, 'template':'dash_weather.html'}
-    return None
+def get_dashboard_meta():
+	return {
+		'pages': [
+			{
+				'name': 'weather',
+				# 'function': None, 
+				'template': 'dash_weather.html',
+				'menutitle': 'Weather',
+			},
+		],
+		'menutitle': 'Weather',
+	}
 
 # moved from geodb.views
 
