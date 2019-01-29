@@ -8,4 +8,10 @@ urlpatterns_getoverviewmaps = patterns(
 
 urlpatterns = [
     url(r'^getOverviewMaps/', include(urlpatterns_getoverviewmaps)),
+    url(r'^api/getoverviewmaps/', include(
+        patterns(
+            'weather.views',
+            url(r'^weather$', 'getWeatherInfoVillages', name='getWeatherInfoVillages'),
+        )        
+    )),
 ]
